@@ -1,14 +1,21 @@
+# .github/workflows/call-build-and-push.yml
 name: Call Build and Push Docker Image
+
 on:
   push:
     branches:
       - main  # Trigger when pushing to the main branch
+
 jobs:
   call-reusable-workflow:
-    uses: remotedef/reusable-repo/.github/workflows/build-and-push-docker.yml@main  # Reference the remote workflow
-    with:
-      docker_image_name: 'nginx'  # Docker image name
-      docker_tag: 'latest'  # Docker image tag
-      gcp_project_id: 'acoustic-garden-457112-d2'  # Your GCP Project ID
-      gcp_region: 'asia-south1'  # The region where your Artifact Registry is located
-      gcp_service_account_key: ${{ secrets.GCP_CREDENTIALS }}  # GCP Service Account Key stored as a secret
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up environment for GCP credentials
+        env:
+          GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}  # Pass secret as an environment variable
+        uses: remotedef/reusable-repo/.github/workflows/build-and-push-docker.yml@main  # Reference the remote workflow
+        with:
+          docker_image_name: 'my-app'  # Docker image name
+          docker_tag: 'latest'  # Docker image tag
+          gcp_project_id: 'your-gcp-project-id'  # Your GCP Project ID
+          gcp_region: 'us-central1'  # The region where your Artifact Registry is located
