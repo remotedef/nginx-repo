@@ -12,7 +12,9 @@ jobs:
     with:
       docker_image_name: 'my-app'  # Docker image name
       docker_tag: 'latest'  # Docker image tag
-      gcp_project_id: 'acoustic-garden-457112-d2'  # Your GCP Project ID
-      gcp_region: 'asia-south1'  # The region where your Artifact Registry is located
+      #gcp_project_id: 'acoustic-garden-457112-d2'  # Your GCP Project ID
+      #gcp_region: 'asia-south1'  # The region where your Artifact Registry is located
     secrets:
+      GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+      GCP_REGION: ${{ secrets.GCP_REGION}}
       GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}  # Pass the secret as environment variable
