@@ -16,4 +16,3 @@ jobs:
       gcp_region: 'asia-south1'  # The region where your Artifact Registry is located
     secrets:
       GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}  # Pass the secret as environment variable
-  
