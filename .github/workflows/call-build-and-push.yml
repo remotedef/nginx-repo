@@ -12,7 +12,7 @@ jobs:
     with:
       docker_image_name: 'my-app'  # Docker image name
       docker_tag: 'latest'  # Docker image tag
-    secrets:
+    #secrets:
       #GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}  # Pass GCP Project ID
       #GCP_CREDENTIALS_JSON: ${{ secrets.GCP_CREDENTIALS_JSON }}  # Pass GCP credentials JSON
-      GCP_REGION: ${{ secrets.GCP_REGION }}  # Pass GCP region
+      #GCP_REGION: ${{ secrets.GCP_REGION }}  # Pass GCP region
