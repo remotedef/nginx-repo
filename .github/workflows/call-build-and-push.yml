@@ -13,18 +13,4 @@ jobs:
       docker_tag: 'latest'  # Docker image tag
       gcp_project_id: 'acoustic-garden-457112-d2'  # Your GCP Project ID
       gcp_region: 'asia-south1'  # The region where your Artifact Registry is located
-      #gcp_service_account_key: ${{ secrets.GCP_CREDENTIALS }}  # GCP Service Account Key stored as a secret
-      gcp_service_account_key: |
-        {
-          "type": "service_account",
-          "project_id": "acoustic-garden-457112-d2",
-          "private_key_id": "aac0eebf389ca2eca4c7ec1e4a558475bda8b392",
-          "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCrLOCxawnL5dMN\nshYjT8lBDcp5VmSBZF17gs0zIqYLXLQ5SMYJxEyTIv8LDSPkrIAGAmhQmbJH58KJ\nDg4Rv0kQABRZKuLzDuo73UJcyaXGHSWi7j2ATVQ0vAYY/aRA6UAthFstA/C3o+O1\n6K/GFFjzgfE7S1LWjCtAw+ub4WirowOzF3geZx4/JOktv+64HagOIWD6WBJinrKF\nPOzHW0zfbcX13LOT38cN7rrtgHnxo1JP34FIz5wsxvk1oZhzYGfKOrWiJGqY5tJB\nb+RfuXPUdTvNtA+8/2ePnAdoIIR98pZVzMpl5NA144IyBSU9Ck8VyMKgePtQsadV\nPz4TWz91AgMBAAECggEAIGyJy1GZM3Q/PDLlmp68YoQ4PC+vLgtS4dhvAiaoCTLw\nOIGeca8rShuw7+j3SZObVIgUNmBGsvQll0yAQcBYGJ3LPPCwuJW0rM5Gicjwi8xt\nmqVCJRGAx9Rt20IAYQNN0tFla+t5J2/17Dk9QmoMR2Pvy+mCsX0vnD8AXDCgYRJZ\n/QNC4lIUorPuVOO2NQ7m1W/sv6VK89b1vb0lAFYHrTBKuaYxMKTdSzT9v8txnrnj\nAjBZlDY98FC7AtrG4pIi8mkrSyEcKge8YZXRVoqqm9BoZwD5+YshjOngkeX40NgE\nP3bPRgucUZiCQIv+6zuQAOxkKSGmi5kIB0v2crkCKQKBgQDryJJQuTqgahDjfqm3\nSfpI/x4JryhBnwspCeB4NXFl3d0OnC1m7PZd1/ZaqVBJob+u5gh9PQ9F9gTfsHM3\n8ndFuK3T6d3GFusOCm94pZsXbZ3gVeI2kIwajrT4D6rIx9Yt2Uhm5e5WMCcDlZJZ\nXeyF3X3E9pDPY34dwLrlagGxvwKBgQC52iluDexhBy19UK3OU0P/Uyxf7CkKBzfH\nQCh5E4WDyizzCADSLppD91s3tSFaYI/WJEZg9N1eiJz+g55G0nhCRMXN4Bvtu69/\njtjEOo0zUCLewlGZ76zv38uvSyCCSIJXF5z0aaxFiRSiuAkO8yagv+99Z8wMzZN6\nZUsF1HXzywKBgQCFWIGnNZp6boHupwvEpQnvjpimUXEq64+cPgG8+jyPp9IFGT50\nHz+WAzVIQMkvW1LUzzOt4IJqxqArAdenpHDf9XoZhwHtrbhx0GUKjl4P+eZ3oRq2\nUTlrK5odUH793ka610+jIhaQl9r4o/aIpB3H92PRqMBtCY+htAX/CNy8cQKBgE75\npstOfVkJ3Mm4o/LeLTHtXRjx2MqbIJe56rjwk7baDdnEV9z40rL5BLkabi7ig5zC\n02lWBE+si9IXigWcYGAAq3F9v0B5le0FfZV9MA1TC05Pkq9wSrOwDPTTXuAeAc0S\niq7NzNfLlYpD3A2PQ6XhidpnZi02mmnTa1rx2qGbAoGAGfZeDFARYWvuejH/3cyT\nmn1Xnt8Dmxwe0RhC7z2iYZdLOZ69wgJsj6H9YWjH2DUlG3VGL5ufC5R+Etvmuq8t\nfSuHvCbP2W7lw3h3vijHsPBYNnIx3fCsemA8ruu/Vdnv6mXO9WM6W7p0tZ2rpEpn\nz7GKyUyD0/dhfBMQAD6GKPQ=\n-----END PRIVATE KEY-----\n",
-          "client_email": "github-sa@acoustic-garden-457112-d2.iam.gserviceaccount.com",
-          "client_id": "110850720571040392908",
-          "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-          "token_uri": "https://oauth2.googleapis.com/token",
-          "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-          "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/github-sa%40acoustic-garden-457112-d2.iam.gserviceaccount.com",
-          "universe_domain": "googleapis.com"
-        }
+      gcp_service_account_key: ${{ secrets.GCP_CREDENTIALS }}  # GCP Service Account Key stored as a secret
