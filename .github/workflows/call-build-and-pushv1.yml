@@ -4,14 +4,6 @@ on:
   push:
     branches:
       - main  # Trigger when pushing to the main branch
-  workflow_call:
-    secrets:
-        GCP_PROJECT_ID:
-          required: true
-        GCP_REGION:
-          required: true
-        GCP_GITHUB_TOKEN:
-          required: true
 
 jobs:
   call-reusable-workflow:
