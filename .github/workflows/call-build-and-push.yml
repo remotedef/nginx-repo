@@ -12,10 +12,7 @@ jobs:
     with:
       docker_image_name: 'my-app'  # Docker image name
       docker_tag: 'latest'  # Docker image tag
-      #gcp_project_id: 'your-gcp-project-id'  # Your GCP Project ID
-      #gcp_region: 'us-central1'  # The region where your Artifact Registry is located
-      #github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for Workload Identity Federation
     secrets:
       GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
       GCP_REGION: ${{ secrets.GCP_REGION}}
-      GCP_GITHUB_TOEKN: ${{ secrets.GCP_GITHUB_TOEKN }}  # Pass the secret as environment variable
+      GCP_GITHUB_TOEKN: ${{ secrets.GCP_GITHUB_TOEKN }}
