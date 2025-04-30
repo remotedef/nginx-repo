@@ -14,4 +14,4 @@ jobs:
     secrets:
       GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
       GCP_REGION: ${{ secrets.GCP_REGION }}
-      GCP_GITHUB_TOKEN: ${{ secrets.GCP_GITHUB_TOKEN }}  # GitHub token for WIF
+      #GCP_GITHUB_TOKEN: ${{ secrets.GCP_GITHUB_TOKEN }}  # GitHub token for WIF
