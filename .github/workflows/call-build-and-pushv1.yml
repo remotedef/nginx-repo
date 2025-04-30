@@ -8,9 +8,9 @@ on:
 jobs:
   call-reusable-workflow:
     uses: remotedef/reusable-repo/.github/workflows/build-and-push-dockerv1.yml@main  # Reference the remote workflow
-    #with:
-    #  docker_image_name: 'my-app'  # Docker image name
-    #  docker_tag: 'latest'  # Docker image tag
+    with:
+      docker_image_name: 'my-app'  # Docker image name
+      docker_tag: 'latest'  # Docker image tag
     secrets:
       GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
       GCP_REGION: ${{ secrets.GCP_REGION }}
