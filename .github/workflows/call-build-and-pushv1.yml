@@ -10,8 +10,9 @@ jobs:
     uses: remotedef/reusable-repo/.github/workflows/build-and-push-dockerv1.yml@main  # Reference the remote workflow
     with:
       docker_image_name: 'my-app'  # Docker image name
-      docker_tag: 'latest'  # Docker image tag
+      docker_tag: 'v1'  # Docker image tag
     secrets:
       GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
       GCP_REGION: ${{ secrets.GCP_REGION }}
+      GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
       #GCP_GITHUB_TOKEN: ${{ secrets.GCP_GITHUB_TOKEN }}  # GitHub token for WIF
