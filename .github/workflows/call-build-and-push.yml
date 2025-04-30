@@ -8,13 +8,14 @@ on:
 
 jobs:
   call-reusable-workflow:
-    uses: remotedef/reusable-repo/.github/workflows/build-and-push-docker.yml@main  # Reference the remote workflow
+    uses: remotedef/reusable-repo/.github/workflows/build-and-push-docker.yml@main  # Reference the remote workflo
     with:
       docker_image_name: 'my-app'  # Docker image name
       docker_tag: 'latest'  # Docker image tag
-      #gcp_project_id: 'acoustic-garden-457112-d2'  # Your GCP Project ID
-      #gcp_region: 'asia-south1'  # The region where your Artifact Registry is located
+      #gcp_project_id: 'your-gcp-project-id'  # Your GCP Project ID
+      #gcp_region: 'us-central1'  # The region where your Artifact Registry is located
+      #github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for Workload Identity Federation
     secrets:
       GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
       GCP_REGION: ${{ secrets.GCP_REGION}}
-      GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}  # Pass the secret as environment variable
+      GCP_GITHUB_TOEKN: ${{ secrets.GCP_GITHUB_TOEKN }}  # Pass the secret as environment variable
