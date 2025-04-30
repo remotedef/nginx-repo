@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main  # Trigger when pushing to the main branch
-
+      
 jobs:
   call-reusable-workflow:
     uses: remotedef/reusable-repo/.github/workflows/build-and-push-docker.yml@main  # Reference the remote workflow
